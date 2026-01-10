@@ -238,8 +238,8 @@ body{
 
 .edu h2, .experience h2{
     margin-bottom: 10px;
-    font-family: "Allura", cursive;
-    font-size: 2rem;
+    font-family: "Teko", sans-serif;
+    font-size: 1.8rem;
     color: #f9b61e;
 }
 
@@ -333,8 +333,8 @@ body{
 /* Skills-Section*/
 
 .skills h2{
-    font-family: "Allura", cursive;
-    font-size: 2rem;
+    font-family: "Teko", sans-serif;
+    font-size: 1.9rem;
     color: #f9b61e;
     margin-bottom: 10px;
 }
@@ -369,8 +369,8 @@ body{
 /* expertise-section */
 
 .expertise h2{
-    font-family: "Allura", cursive;
-    font-size: 2rem;
+    font-family: "Teko", sans-serif;
+    font-size: 1.9rem;
     color: #f9b61e;
     margin-bottom: 10px;
 }
@@ -399,8 +399,8 @@ body{
 /* Hobbies-section*/
 
 .Hobbies h2{
-    font-family: "Allura", cursive;
-    font-size: 2rem;
+    font-family: "Teko", sans-serif;
+    font-size: 1.9rem;
     color: #f9b61e;
     margin-bottom: 10px;
 }
@@ -465,8 +465,8 @@ body{
 }
 
 .language h2{
-    font-family: "Allura", cursive;
-    font-size: 2rem;
+    font-family: "Teko", sans-serif;
+    font-size: 1.9rem;
     color: #f9b61e;
     margin-bottom: 10px;
 }
@@ -826,4 +826,5 @@ img {
     font-size: 50px;
     cursor: pointer;
     z-index: 1002;
+
 }
