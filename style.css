@@ -2010,14 +2010,93 @@ img {
 /* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
   .motion-graphic,
-  .motion-graphic video,
-  .motion-graphic img,
-  .motion-graphic-placeholder {
+  .motion-graphic video{
     transition: none;
   }
   
   .motion-graphic:hover,
   .motion-graphic.active {
     transform: none;
+  }
+}
+
+/* Ai video Section */
+
+.ai-section{
+  text-align: center;
+  border: 2px solid #f9511e;
+  border-radius: 20px;
+  margin: 30px
+}
+
+.ai-section h1{
+    color: #f9631e;
+    font-family: "Teko", sans-serif;
+    padding-top: 50px;
+    font-size: 6rem;
+}
+
+.vidx-hero {
+  width: 90%;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 16px;
+  /*padding-left: 250px;*/
+  display: flex;
+  justify-content: center;
+  height: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.vidx-hero-video {
+  width: 80%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 72, 0, 0.4);
+}
+
+/* Reels Section */
+.vidx-reels-wrapper {
+  width: 90%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.vidx-reel {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.vidx-reel:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 72, 0, 0.6);
+}
+
+/* Active (Click) Effect */
+.vidx-reel:active {
+  transform: scale(0.99);
+  box-shadow: 0 0 25px rgba(255, 51, 0, 0.8);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .vidx-reels-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .vidx-reels-wrapper {
+    grid-template-columns: 1fr;
   }
 }
