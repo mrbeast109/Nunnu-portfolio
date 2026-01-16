@@ -1351,7 +1351,7 @@ body{
 
 .video-background {
   position: relative;
-  height: 22vh;
+  height: 30vh;
   overflow: hidden;
 }
 
@@ -1390,7 +1390,7 @@ body{
   margin: 0 0 0.5rem 0;
   font-family: 'Allura', cursive;
   color: #f9b61e;
-  font-size: 6rem;
+  font-size: 8rem;
 }
 
 /*Design text headline*/
@@ -1501,13 +1501,13 @@ img {
   object-fit: cover;
   display: block;
   /* Smooth transition for the transform and filter properties */
-  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              filter 0.3s ease;
+  transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              filter 0.15s ease;
 }
 
 /* The Hover State */
 .card:hover img {
-  transform: scale(1.01); 
+  transform: scale(1.02); 
   filter: brightness(1.1); 
 }
 
@@ -1770,12 +1770,12 @@ img {
   z-index: 10;
 }
 
-.reel:hover .reel-placeholder {
+.reel:hover {
   background: linear-gradient(135deg, #f9b61e25 0%, #f9b61e10 100%);
   border-color: rgba(249, 182, 30, 0.6);
 }
 
-.reel:hover .reel-label {
+.reel:hover {
   opacity: 1;
 }
 
@@ -1786,7 +1786,7 @@ img {
 }
 
 /* Active State (when clicked) */
-.reel.active {
+.reel:active {
   transform: scale(1.05);
   box-shadow: 
     0 25px 50px rgba(249, 182, 30, 0.4),
@@ -1794,7 +1794,7 @@ img {
   z-index: 15;
 }
 
-.reel.active .reel-placeholder {
+.reel:active{
   background: linear-gradient(135deg, #f9b61e35 0%, #f9b61e15 100%);
   border-color: #f9b61e;
 }
@@ -1858,6 +1858,166 @@ img {
   
   .reel:hover,
   .reel.active {
+    transform: none;
+  }
+}
+
+/* Motion Graphics Section */
+
+
+
+.motion-graphics{
+  min-height: 110vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #101012;
+  box-sizing: border-box;
+}
+
+.motion-graphics h1 {
+  margin-top: 50px;
+  font-size: 6rem;
+  font-family: "Teko", sans-serif;
+  color: #1071e0;
+  font-weight: 700;
+  text-align: center;
+  flex-shrink: 0;
+  height: 180px;
+}
+
+
+.motion-graphics-container{
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 2.5fr);
+  gap: 1.5rem;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid #1071e0;
+  border-radius: 20px;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.motion-graphic{
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  background: linear-gradient(135deg, #1a1a1c 0%, #2a2a2c 100%);
+  min-height: 400px;
+  height: 90vh;
+}
+
+
+.motion-graphic video,
+.motion-graphic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effects */
+.motion-graphic:hover {
+  transform: scale(1.03) translateY(-4px);
+  box-shadow: 
+    0 20px 40px rgba(30, 150, 249, 0.2),
+    0 0 0 2px rgba(30, 150, 249, 0.3);
+  z-index: 10;
+}
+
+.motion-graphic:hover {
+  background: linear-gradient(135deg, #1ea1f925 0%, #1e8ff910 100%);
+  border-color: rgba(30, 117, 249, 0.6);
+}
+
+.motion-graphic:hover {
+  opacity: 1;
+}
+
+.motion-graphic:hover video,
+.motion-graphic:hover img {
+  filter: brightness(1.15);
+  transform: scale(1.05);
+}
+
+/* Active State (when clicked) */
+.motion-graphic:active {
+  transform: scale(1.05);
+  box-shadow: 
+    0 25px 50px rgba(30, 117, 249, 0.4),
+    0 0 0 3px #1e84f9;
+  z-index: 15;
+}
+
+.motion-graphic:active {
+  background: linear-gradient(135deg, #1e84f935 0%, #1e58f915 100%);
+  border-color: #1071e0;
+}
+
+.motion-graphic.active video,
+.motion-graphic.active img {
+  filter: brightness(1.2) saturate(1.1);
+}
+
+/* Tablet Layout (2 columns + centered 3rd) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .motion-graphics-container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  
+  .motion-graphic:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  
+  .motion-graphic{
+    min-height: 350px;
+  }
+}
+
+/* Mobile Layout (stacked vertically) */
+@media (max-width: 768px) {
+  .motion-graphics{
+    padding: 1.5rem 1rem;
+  }
+  
+  .motion-graphics h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .motion-graphics-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .motion-graphic {
+    min-height: 33vh;
+  }
+  
+  .motion-graphic:hover {
+    transform: scale(1.01);
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .motion-graphic,
+  .motion-graphic video,
+  .motion-graphic img,
+  .motion-graphic-placeholder {
+    transition: none;
+  }
+  
+  .motion-graphic:hover,
+  .motion-graphic.active {
     transform: none;
   }
 }
