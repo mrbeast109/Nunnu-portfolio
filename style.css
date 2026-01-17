@@ -2030,10 +2030,11 @@ img {
 }
 
 .ai-section h1{
-    color: #f9631e;
+    color: #ff7b00;
     font-family: "Teko", sans-serif;
     padding-top: 50px;
     font-size: 6rem;
+    text-shadow: 0 3px 6px rgba(255, 60, 0, 0.35);
 }
 
 .vidx-hero {
@@ -2099,4 +2100,161 @@ img {
   .vidx-reels-wrapper {
     grid-template-columns: 1fr;
   }
+}
+
+
+.banner-container{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner-container h2{
+    font-family: "Teko", sans-serif;
+    font-size: 5rem;
+    color: #f9b61e;
+    margin-bottom: 20px;
+    padding: 20px 0 0 0;
+}
+
+.clothing-banners{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 0 auto;
+    height: 100vh;
+    padding: 20px 20px 20px 20px; 
+    margin-left: 90px;
+}
+
+.banner-card1,
+.banner-card2,
+.banner-card3,
+.banner-card4{
+  width: 90%;
+}
+
+.banner-card1 h1{
+  text-align: center;
+  color: red;
+  font-size: 3rem;
+  padding: 20px;
+  font-family: "Teko", sans-serif;
+  font-style: italic;
+}
+
+.banner-card1 span{
+  color: white;
+  background-color: red;
+  font-size: 2.3rem;
+  padding: 12px 20px 5px 12px;
+  border-radius: 12px;
+}
+
+.banner-card1 img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: rgb(231, 20, 5) 0px 0px 10px 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.banner-card2 h1{
+  text-align: center;
+  color: #ffffff;
+  font-size: 3rem;
+  padding: 20px;
+  font-family: "Teko", sans-serif;
+  font-style: italic;
+}
+
+.banner-card2 span{
+  color: #101012;
+  background-color: #ffffff;
+  font-size: 2.3rem;
+  padding: 10px 20px 5px 12px;
+  border-radius: 12px;
+  margin-left: 18px;
+}
+
+.banner-card2 img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: rgb(255, 255, 255) 0px 0px 10px 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.banner-card3 h1{
+  text-align: center;
+  color: #ffffff;
+  font-size: 3rem;
+  padding: 20px;
+  font-family: "Teko", sans-serif;
+  font-style: italic;
+}
+
+.banner-card3 span{
+  color: #ffd000;
+  font-size: 3rem;
+}
+
+.banner-card3 img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: rgb(255, 208, 0) 0px 0px 10px 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.banner-card4 h1{
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  padding: 20px;
+  font-family: "Teko", sans-serif;
+  font-style: italic;
+}
+
+.banner-card4 img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: rgb(115, 115, 116) 0px 0px 10px 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.banner-card1 img:hover { box-shadow: 0 0 25px #ff0000; }
+.banner-card2 img:hover { box-shadow: 0 0 25px #ffffff; }
+.banner-card3 img:hover { box-shadow: 0 0 25px #ffcc00; }
+.banner-card4 img:hover { box-shadow: 0 0 25px #a0a0a0; }
+
+.banner-card1 img,
+.banner-card2 img,
+.banner-card3 img,
+.banner-card4 img {
+  transition: box-shadow 0.2s, transform 0.2s, filter 0.2s;
+}
+
+.banner-card1 img:hover,
+.banner-card2 img:hover,
+.banner-card3 img:hover,
+.banner-card4 img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.01);
 }
