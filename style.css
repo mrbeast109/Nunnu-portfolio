@@ -2377,48 +2377,70 @@ img {
 }
 
 
-
-/* contact - section */
-
-.contact-container{
-  height: 85vh;
-  background: rgb(31, 31, 31);
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  box-shadow: rgb(115, 115, 116) 0px 20px 50px 1px;
-  margin-top: 150px;
+.contact-glass {
+  width: 100%;
+  margin: 80px auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-.contact-left{
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 0 40px 0 80px;
-  margin-left: 300px;
+  gap: 30px;
+  height: 75vh;
+  background: rgb(31, 31, 31);
+  border-radius: 40px;
 }
 
-.contact-left-title h2{
-  font-family: "Teko", sans-serif;
-  font-size: 4rem;
+.contact-left, .contact-right {
+  background: rgba(133, 133, 133, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 0 30px rgba(8, 8, 8, 0.15);
+  width: 40%;
+}
+
+h2, h3 {
   color: #f9b61e;
 }
 
-.hoz-line{
-  width: 300px;
-  height: 2px;
-  background-color: #f9b61e;
+input, textarea {
+  width: 90%;
+  margin: 12px 0;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #3d3d3d;
+  color: #fff;
+  border-radius: 8px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+button {
+  background: #f9b61e;
+  color: #101012;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+button:hover {
+  background: #ffffff;
+}
+
+.socials {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.socials a:hover {
+  transform: scale(1.1);
 }
 
 
-.contact-inputs{
-   width: 85%;
-   height: 40px;
-   border-radius: 20px;
-   border: none;
-   padding: 10px 10px 10px 10px;
+footer p{
+  color: grey;
+  text-align: center;
+  padding: 20px;
 }
