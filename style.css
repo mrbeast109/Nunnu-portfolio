@@ -1706,6 +1706,13 @@ img {
   box-sizing: border-box;
 }
 
+.reels-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
 .reels-section h1 {
   margin-top: 50px;
   font-size: 6rem;
@@ -1874,6 +1881,19 @@ img {
   padding: 2rem;
   background-color: #101012;
   box-sizing: border-box;
+}
+
+.motion-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.motion-left-line{
+  width: 650px;
+  height: 2px;
+  background-color: blue;
 }
 
 .motion-graphics h1 {
@@ -2102,6 +2122,7 @@ img {
   }
 }
 
+/*BANNER SECTION*/
 
 .banner-container{
     width: 100%;
@@ -2129,7 +2150,7 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin: 0 auto;
-    height: 100vh;
+    height: auto;
     padding: 20px 20px 20px 20px; 
     margin-left: 90px;
 }
@@ -2137,7 +2158,9 @@ img {
 .banner-card1,
 .banner-card2,
 .banner-card3,
-.banner-card4{
+.banner-card4,
+.banner-card5,
+.banner-card6{
   width: 90%;
 }
 
@@ -2239,22 +2262,163 @@ img {
     cursor: pointer;
 }
 
+.banner-card5 h1{
+  text-align: center;
+  color: yellow;
+  font-size: 3rem;
+  padding: 20px;
+  font-family: "Teko", sans-serif;
+  font-style: italic;
+}
+
+.banner-card5 img{
+  width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: rgb(233, 229, 3) 0px 0px 10px 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.banner-card6 h1{
+  text-align: center;
+  color: rgb(157, 99, 223);
+  font-size: 3rem;
+  padding: 20px;
+  font-family: "Teko", sans-serif;
+  font-style: italic;
+}
+
+.banner-card6 img{
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: rgb(157, 99, 223) 0px 0px 10px 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+
 .banner-card1 img:hover { box-shadow: 0 0 25px #ff0000; }
 .banner-card2 img:hover { box-shadow: 0 0 25px #ffffff; }
 .banner-card3 img:hover { box-shadow: 0 0 25px #ffcc00; }
 .banner-card4 img:hover { box-shadow: 0 0 25px #a0a0a0; }
+.banner-card5 img:hover { box-shadow: 0 0 25px #e9e503; }
+.banner-card6 img:hover { box-shadow: 0 0 25px #9d63df; }
 
 .banner-card1 img,
 .banner-card2 img,
 .banner-card3 img,
-.banner-card4 img {
+.banner-card4 img,
+.banner-card5 img,
+.banner-card6 img {
   transition: box-shadow 0.2s, transform 0.2s, filter 0.2s;
 }
 
 .banner-card1 img:hover,
 .banner-card2 img:hover,
 .banner-card3 img:hover,
-.banner-card4 img:hover {
+.banner-card4 img:hover,
+.banner-card5 img:hover,
+.banner-card6 img:hover {
   transform: scale(1.03);
   filter: brightness(1.01);
+}
+
+
+.banner-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px
+}
+
+.left-line,
+.right-line{
+  width: 650px;
+  height: 2px;
+  background-color: #f9b61e;
+}
+
+.bottom-line{
+  width: 90%;
+  height: 2px;
+  background-color: #f9b61e;
+  margin: 50px auto 0 auto;
+}
+
+/*Gym videos */
+
+.gym-edits-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gym-edits-heading h1{
+    color: #f9b61e;
+    font-family: "Teko", sans-serif;
+    padding: 40px;
+    font-size: 6rem;
+}
+
+.gym-edit{
+  width: 95%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+
+
+/* contact - section */
+
+.contact-container{
+  height: 85vh;
+  background: rgb(31, 31, 31);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  box-shadow: rgb(115, 115, 116) 0px 20px 50px 1px;
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0 40px 0 80px;
+  margin-left: 300px;
+}
+
+.contact-left-title h2{
+  font-family: "Teko", sans-serif;
+  font-size: 4rem;
+  color: #f9b61e;
+}
+
+.hoz-line{
+  width: 300px;
+  height: 2px;
+  background-color: #f9b61e;
+}
+
+
+.contact-inputs{
+   width: 85%;
+   height: 40px;
+   border-radius: 20px;
+   border: none;
+   padding: 10px 10px 10px 10px;
 }

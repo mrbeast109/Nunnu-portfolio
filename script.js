@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const cards = document.querySelectorAll(
-  '.banner-card1 img, .banner-card2 img, .banner-card3 img, .banner-card4 img'
+  '.banner-card1 img, .banner-card2 img, .banner-card3 img, .banner-card4 img, .banner-card5 img, .banner-card6 img'
 );
 
 cards.forEach(card => {
