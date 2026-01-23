@@ -103,7 +103,10 @@ html {
 /*About-section*/
 
 .about-me {
-  height: 100%;
+  /* height: 100% caused overlap when content exceeded viewport height */
+  height: auto;
+  min-height: 100vh;
+  /* Ensures it fills screen if content is short */
   display: grid;
   grid-template-columns: 2fr 1.4fr 1.4fr 1.4fr;
   color: white;
@@ -2776,7 +2779,10 @@ footer p {
   }
 
   /* Make Education and Experience side-by-side on Tablet */
-  .col2 {
+  /* Make Education, Experience, Skills, Expertise, Hobbies, Language side-by-side on Tablet */
+  .col2,
+  .col3,
+  .col4 {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -2787,19 +2793,16 @@ footer p {
   }
 
   .edu,
-  .experience {
+  .experience,
+  .skills,
+  .expertise,
+  .Hobbies,
+  .language {
     width: 48%;
     /* Side by side */
     margin-bottom: 0;
     text-align: left;
     /* Keep content readable */
-  }
-
-  .skills,
-  .hobbies,
-  .expertice {
-    width: 100%;
-    margin-bottom: 30px;
   }
 
   .about-me-contact h2 {
@@ -3044,13 +3047,19 @@ footer p {
   }
 
   /* Reset Education/Experience stacking for Mobile */
-  .col2 {
+  .col2,
+  .col3,
+  .col4 {
     flex-direction: column;
     gap: 0;
   }
 
   .edu,
-  .experience {
+  .experience,
+  .skills,
+  .expertise,
+  .Hobbies,
+  .language {
     width: 100%;
     margin-bottom: 30px;
     text-align: center;
@@ -3060,5 +3069,30 @@ footer p {
   .intro h2 {
     font-size: 2.8rem;
     /* Big but fits mobile */
+  }
+}
+
+/* =========================================
+   LANDSCAPE MOBILE ADJUSTMENTS
+   ========================================= */
+@media screen and (max-width: 950px) and (orientation: landscape) {
+
+  .col2,
+  .col3,
+  .col4 {
+    flex-direction: row !important;
+    gap: 20px;
+  }
+
+  .edu,
+  .experience,
+  .skills,
+  .expertise,
+  .Hobbies,
+  .language {
+    width: 48% !important;
+    margin-bottom: 0;
+    text-align: center;
+    /* Center alignment as requested */
   }
 }
