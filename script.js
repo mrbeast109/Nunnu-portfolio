@@ -2,7 +2,7 @@ function openPreview(element) {
     const modal = document.getElementById("videoModal");
     const previewVideo = document.getElementById("previewVideo");
     const bgVideo = document.getElementById("bgVideo");
-    
+
     // Extract video source from the clicked grid item
     const videoSrc = element.querySelector("video").src;
 
@@ -30,7 +30,7 @@ function closePreview() {
 }
 
 // Close modal when user clicks on the background (outside the video)
-window.onclick = function(event) {
+window.onclick = function (event) {
     const modal = document.getElementById("videoModal");
     if (event.target == modal) {
         closePreview();
@@ -41,7 +41,7 @@ function openPreview(element) {
     const modal = document.getElementById("videoModal");
     const previewVideo = document.getElementById("previewVideo");
     const bgVideo = document.getElementById("bgVideo");
-    
+
     // Extract video source from the clicked grid item
     const videoSrc = element.querySelector("video").src;
 
@@ -69,7 +69,7 @@ function closePreview() {
 }
 
 // Close modal when user clicks on the background (outside the video)
-window.onclick = function(event) {
+window.onclick = function (event) {
     const modal = document.getElementById("videoModal");
     if (event.target == modal) {
         closePreview();
@@ -77,25 +77,25 @@ window.onclick = function(event) {
 }
 
 // Reel Click Interaction
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const reels = document.querySelectorAll('.reel');
-    
+
     reels.forEach(reel => {
-        reel.addEventListener('click', function() {
+        reel.addEventListener('click', function () {
             // Remove active class from all reels
             reels.forEach(r => r.classList.remove('active'));
-            
+
             // Add active class to clicked reel
             this.classList.add('active');
         });
     });
-    
+
     // Optional: Add keyboard navigation for accessibility
     reels.forEach(reel => {
         reel.setAttribute('tabindex', '0');
         reel.setAttribute('role', 'button');
-        
-        reel.addEventListener('keydown', function(e) {
+
+        reel.addEventListener('keydown', function (e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 this.click();
@@ -105,35 +105,35 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const cards = document.querySelectorAll(
-  '.banner-card1 img, .banner-card2 img, .banner-card3 img, .banner-card4 img, .banner-card5 img, .banner-card6 img'
+    '.banner-card1 img, .banner-card2 img, .banner-card3 img, .banner-card4 img, .banner-card5 img, .banner-card6 img'
 );
 
 cards.forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
 
-    const rotateX = ((y - centerY) / centerY) * 8;   // Tilt strength
-    const rotateY = ((x - centerX) / centerX) * -8;
+        const rotateX = ((y - centerY) / centerY) * 8;   // Tilt strength
+        const rotateY = ((x - centerX) / centerX) * -8;
 
-    card.style.transform = `
+        card.style.transform = `
       perspective(1000px)
       rotateX(${rotateX}deg)
       rotateY(${rotateY}deg)
       scale(1.03)
     `;
-  });
+    });
 
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = `
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = `
       perspective(1000px)
       rotateX(0deg)
       rotateY(0deg)
       scale(1)
     `;
-  });
+    });
 });
