@@ -755,9 +755,10 @@ img {
 
 .video-text-headline h1 {
   color: #f9b61e;
-  font-family: "Allura", cursive;
+  font-family: "Teko", sans-serif !important;
   padding: 55px;
   font-size: 6rem;
+  background-color: #101012;
 }
 
 /* video edits Section */
@@ -1985,8 +1986,12 @@ img {
   gap: 20px;
 }
 
+
 .motion-left-line {
-  width: 650px;
+  width: auto;
+  flex: 1;
+  max-width: 650px;
+  min-width: 50px;
   height: 2px;
   background-color: blue;
 }
@@ -2451,7 +2456,10 @@ img {
 
 .left-line,
 .right-line {
-  width: 650px;
+  width: auto;
+  flex: 1;
+  max-width: 650px;
+  min-width: 50px;
   height: 2px;
   background-color: #f9b61e;
 }
@@ -2471,11 +2479,24 @@ img {
   align-items: center;
 }
 
+
 .gym-edits-heading h1 {
   color: #f9b61e;
   font-family: "Teko", sans-serif;
   padding: 40px;
   font-size: 6rem;
+  /* Prevent wrapping if possible, or allow it but keep lines aligned */
+}
+
+/* Make lines flexible for Gym Edits to fit 1440px and other screens */
+.gym-edits-heading .left-line,
+.gym-edits-heading .right-line {
+  width: auto;
+  flex: 1;
+  max-width: 650px;
+  /* Optional: keep original size as max */
+  min-width: 50px;
+  /* Ensure they don't disappear */
 }
 
 .gym-edit {
@@ -2801,7 +2822,7 @@ footer p {
     width: 48%;
     /* Side by side */
     margin-bottom: 0;
-    text-align: left;
+    text-align: center;
     /* Keep content readable */
   }
 
@@ -3008,8 +3029,8 @@ footer p {
 
   /* Gym Edit */
   .gym-edits-heading h1 {
-    font-size: 2.5rem;
-    /* Reduced to fit on one line/prevent bad wrapping */
+    font-size: 4rem;
+    /* Increased size as requested */
     white-space: nowrap;
     /* Tries to keep it on one line if possible */
   }
@@ -3062,8 +3083,32 @@ footer p {
   .language {
     width: 100%;
     margin-bottom: 30px;
-    text-align: center;
     /* Center align for mobile vertical stack */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .edu .items,
+  .experience .items,
+  .skills .items,
+  .expertise .items,
+  .Hobbies .items,
+  .language .items {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Remove left padding that pushes content off-center */
+  .education,
+  .exp,
+  .sk,
+  .expert,
+  .hobbies,
+  .lang {
+    padding-left: 0 !important;
   }
 
   .intro h2 {
