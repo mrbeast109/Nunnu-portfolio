@@ -137,3 +137,33 @@ cards.forEach(card => {
     `;
     });
 });
+
+// Loading Animation
+document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("loading");
+    const loaderPercentage = document.getElementById("loader-percentage");
+    const loader = document.getElementById("loader");
+
+    if (!loader || !loaderPercentage) return;
+
+    let count = 0;
+    const updateLoader = setInterval(() => {
+        count += Math.floor(Math.random() * 6) + 1;
+        if (count >= 100) {
+            count = 100;
+            loaderPercentage.textContent = count + "%";
+            clearInterval(updateLoader);
+
+            setTimeout(() => {
+                loader.classList.add("loader-hidden");
+                document.body.classList.remove("loading");
+
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 1000);
+            }, 300);
+        } else {
+            loaderPercentage.textContent = count + "%";
+        }
+    }, 30);
+});

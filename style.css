@@ -100,13 +100,13 @@ html {
 }
 
 
-/*About-section*/
+
 
 .about-me {
-  /* height: 100% caused overlap when content exceeded viewport height */
+
   height: auto;
   min-height: 100vh;
-  /* Ensures it fills screen if content is short */
+
   display: grid;
   grid-template-columns: 2fr 1.4fr 1.4fr 1.4fr;
   color: white;
@@ -203,7 +203,7 @@ html {
   font-weight: 700;
 }
 
-/*Education-section*/
+
 
 .col-1::after {
   content: "";
@@ -279,7 +279,7 @@ html {
   margin-top: 20px
 }
 
-/*Experience-section*/
+
 
 .exp {
   font-family: "Montserrat", sans-serif;
@@ -354,7 +354,7 @@ html {
   background-color: #ffe08a;
 }
 
-/* Skills-Section*/
+
 
 .skills h2 {
   font-family: "Teko", sans-serif;
@@ -390,7 +390,7 @@ html {
   margin-bottom: 30px
 }
 
-/* expertise-section */
+
 
 .expertise h2 {
   font-family: "Teko", sans-serif;
@@ -420,7 +420,7 @@ html {
   position: relative;
 }
 
-/* Hobbies-section*/
+
 
 .Hobbies h2 {
   font-family: "Teko", sans-serif;
@@ -482,7 +482,7 @@ html {
 }
 
 
-/*language-section*/
+
 
 .language {
   margin-top: 45px
@@ -518,7 +518,7 @@ html {
 
 
 
-/* My work heading */
+
 
 .video-background {
   position: relative;
@@ -564,7 +564,7 @@ html {
   font-size: 6rem;
 }
 
-/*Design text headline*/
+
 
 .design-text-headline {
   height: 25vh;
@@ -582,22 +582,22 @@ html {
   font-size: 3.3rem;
 }
 
-/* Graphic Container*/
 
 
-/* Main Layout Container */
+
+
 .portfolio-container {
   display: flex;
   gap: 40px;
   background-color: #101012;
-  /* Dark theme matching your image */
+
   color: white;
   padding: 80px;
   font-family: "Montserrat", sans-serif;
   height: 125vh;
 }
 
-/* Left side takes up more space (e.g., 60%) */
+
 .main-column {
   flex: 0.9;
   height: 70%;
@@ -608,7 +608,7 @@ html {
   border-radius: 10px;
 }
 
-/* Right side takes up less space (e.g., 40%) */
+
 .side-columns {
   flex: 0.8;
   display: flex;
@@ -617,24 +617,24 @@ html {
   min-height: 0;
 }
 
-/* Common Grid Styling for all sections */
+
 .grid {
   display: flex;
   flex-wrap: wrap;
-  /* Allows cards to wrap to next line */
+
   gap: 10px;
 }
 
 .card {
   flex: 1 1 calc(33.33% - 12px);
-  /* Adjusts for 3 columns */
+
   aspect-ratio: 1 / 1;
   background-color: #101012;
   border-radius: 4px;
   overflow: hidden;
 }
 
-/* Adjusting the side column to have 2 or 3 items per row */
+
 .side-columns .card {
   flex: 1 1 calc(33.33% - 12px);
 }
@@ -660,7 +660,7 @@ img {
   font-size: 2rem;
 }
 
-/* Ensure the card clips the zooming image */
+
 .card {
   position: relative;
   overflow: hidden;
@@ -674,12 +674,12 @@ img {
   height: 100%;
   object-fit: cover;
   display: block;
-  /* Smooth transition for the transform and filter properties */
+
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.3s ease;
 }
 
-/* The Hover State */
+
 .card:hover img {
   transform: scale(1.01);
   filter: brightness(1.1);
@@ -694,7 +694,7 @@ img {
 
 @media (max-width: 768px) {
 
-  /* 1. Allow the container to grow naturally and scroll the whole page */
+
   .portfolio-container {
     flex-direction: column;
     height: auto;
@@ -703,7 +703,7 @@ img {
     justify-content: center;
   }
 
-  /* 2. Remove fixed heights and internal scrolling for mobile usability */
+
   body,
   html {
     overflow: visible;
@@ -718,17 +718,17 @@ img {
     overflow: visible;
   }
 
-  /* 3. Adjust the grid for 2 columns instead of 3 to keep images visible */
+
   .main-column .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
   }
 
-  /* 4. Ensure right-side categories stack naturally */
+
   .side-columns {
     gap: 40px;
-    /* Space between the smaller projects */
+
     margin-top: 30px;
   }
 
@@ -740,11 +740,15 @@ img {
 
   .card {
     aspect-ratio: 1 / 1;
-    /* Keep them square on mobile */
+
+  }
+
+  .hero-text h1 {
+    font-size: 8rem;
   }
 }
 
-/* Video text headline*/
+
 
 .video-text-headline {
   height: 25vh;
@@ -761,11 +765,11 @@ img {
   background-color: #101012;
 }
 
-/* video edits Section */
+
 
 .video-collage {
   display: grid;
-  /* Create 4 equal columns and set row height */
+
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   padding: 20px;
@@ -776,42 +780,42 @@ img {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  /* Rounded corners like your image */
+
 }
 
 .item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Ensures video fills the area without stretching */
+
 }
 
-/* Specific Layout Logic */
+
 .v1 {
   grid-column: span 2;
   grid-row: span 2;
 }
 
-/* Large top left video */
+
 .v4,
 .v8 {
   grid-row: span 3;
 }
 
-/* Tall vertical video */
+
 .v7 {
   grid-column: span 2;
 }
 
-/* Wide bottom video */
 
-/* Hover & Touch Effect (as requested previously) */
+
+
 .item:active {
   transform: scale(0.98);
   transition: 0.2s;
 }
 
-/* Hover Effect */
+
 .item {
   position: relative;
   overflow: hidden;
@@ -834,7 +838,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffcc00;
-  /* Yellow theme from your image */
+
   opacity: 0;
   transition: opacity 0.3s;
   font-weight: bold;
@@ -844,7 +848,7 @@ img {
   opacity: 1;
 }
 
-/* Modal Styling */
+
 .modal {
   display: none;
   position: fixed;
@@ -903,7 +907,7 @@ img {
   background-color: #101012;
 }
 
-/* clothing brand reels section */
+
 
 * {
   padding: 0;
@@ -994,7 +998,7 @@ body {
   margin-top: 6px;
 }
 
-/*About-section*/
+
 
 .about-me {
   height: 78vh;
@@ -1095,7 +1099,7 @@ body {
   font-weight: 700;
 }
 
-/*Education-section*/
+
 
 .col-1::after {
   content: "";
@@ -1171,7 +1175,7 @@ body {
   margin-top: 20px
 }
 
-/*Experience-section*/
+
 
 .exp {
   font-family: "Montserrat", sans-serif;
@@ -1246,7 +1250,7 @@ body {
   background-color: #ffe08a;
 }
 
-/* Skills-Section*/
+
 
 .skills h2 {
   font-family: "Teko", sans-serif;
@@ -1282,7 +1286,7 @@ body {
   margin-bottom: 30px
 }
 
-/* expertise-section */
+
 
 .expertise h2 {
   font-family: "Teko", sans-serif;
@@ -1312,7 +1316,7 @@ body {
   position: relative;
 }
 
-/* Hobbies-section*/
+
 
 .Hobbies h2 {
   font-family: "Teko", sans-serif;
@@ -1374,7 +1378,7 @@ body {
 }
 
 
-/*language-section*/
+
 
 .language {
   margin-top: 45px
@@ -1408,7 +1412,7 @@ body {
   position: relative;
 }
 
-/* My work heading */
+
 
 .video-background {
   position: relative;
@@ -1445,7 +1449,7 @@ body {
   padding: 1rem;
   box-sizing: border-box;
   text-align: center;
-  /* Ensure text alignment is centered */
+
 }
 
 .text-overlay h1 {
@@ -1456,7 +1460,7 @@ body {
   font-size: 8rem;
 }
 
-/*Design text headline*/
+
 
 .design-text-headline {
   height: 25vh;
@@ -1474,22 +1478,22 @@ body {
   font-size: 3.3rem;
 }
 
-/* Graphic Container*/
 
 
-/* Main Layout Container */
+
+
 .portfolio-container {
   display: flex;
   gap: 40px;
   background-color: #101012;
-  /* Dark theme matching your image */
+
   color: white;
   padding: 80px;
   font-family: "Montserrat", sans-serif;
   height: 125vh;
 }
 
-/* Left side takes up more space (e.g., 60%) */
+
 .main-column {
   flex: 0.9;
   height: 70%;
@@ -1500,7 +1504,7 @@ body {
   border-radius: 10px;
 }
 
-/* Right side takes up less space (e.g., 40%) */
+
 .side-columns {
   flex: 0.8;
   display: flex;
@@ -1509,24 +1513,24 @@ body {
   min-height: 0;
 }
 
-/* Common Grid Styling for all sections */
+
 .grid {
   display: flex;
   flex-wrap: wrap;
-  /* Allows cards to wrap to next line */
+
   gap: 10px;
 }
 
 .card {
   flex: 1 1 calc(33.33% - 12px);
-  /* Adjusts for 3 columns */
+
   aspect-ratio: 1 / 1;
   background-color: #101012;
   border-radius: 4px;
   overflow: hidden;
 }
 
-/* Adjusting the side column to have 2 or 3 items per row */
+
 .side-columns .card {
   flex: 1 1 calc(33.33% - 12px);
 }
@@ -1552,7 +1556,7 @@ img {
   font-size: 2rem;
 }
 
-/* Ensure the card clips the zooming image */
+
 .card {
   position: relative;
   overflow: hidden;
@@ -1566,12 +1570,12 @@ img {
   height: 100%;
   object-fit: cover;
   display: block;
-  /* Smooth transition for the transform and filter properties */
+
   transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.15s ease;
 }
 
-/* The Hover State */
+
 .card:hover img {
   transform: scale(1.02);
   filter: brightness(1.1);
@@ -1586,7 +1590,7 @@ img {
 
 @media (max-width: 768px) {
 
-  /* 1. Allow the container to grow naturally and scroll the whole page */
+
   .portfolio-container {
     flex-direction: column;
     height: auto;
@@ -1595,7 +1599,7 @@ img {
     justify-content: center;
   }
 
-  /* 2. Remove fixed heights and internal scrolling for mobile usability */
+
   body,
   html {
     overflow: visible;
@@ -1610,17 +1614,17 @@ img {
     overflow: visible;
   }
 
-  /* 3. Adjust the grid for 2 columns instead of 3 to keep images visible */
+
   .main-column .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
   }
 
-  /* 4. Ensure right-side categories stack naturally */
+
   .side-columns {
     gap: 40px;
-    /* Space between the smaller projects */
+
     margin-top: 30px;
   }
 
@@ -1632,11 +1636,11 @@ img {
 
   .card {
     aspect-ratio: 1 / 1;
-    /* Keep them square on mobile */
+
   }
 }
 
-/* Video text headline*/
+
 
 .video-text-headline {
   height: 25vh;
@@ -1652,11 +1656,11 @@ img {
   font-size: 6rem;
 }
 
-/* video edits Section */
+
 
 .video-collage {
   display: grid;
-  /* Create 4 equal columns and set row height */
+
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   padding: 20px;
@@ -1667,42 +1671,42 @@ img {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  /* Rounded corners like your image */
+
 }
 
 .item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Ensures video fills the area without stretching */
+
 }
 
-/* Specific Layout Logic */
+
 .v1 {
   grid-column: span 2;
   grid-row: span 2;
 }
 
-/* Large top left video */
+
 .v4,
 .v8 {
   grid-row: span 3;
 }
 
-/* Tall vertical video */
+
 .v7 {
   grid-column: span 2;
 }
 
-/* Wide bottom video */
 
-/* Hover & Touch Effect (as requested previously) */
+
+
 .item:active {
   transform: scale(0.98);
   transition: 0.2s;
 }
 
-/* Hover Effect */
+
 .item {
   position: relative;
   overflow: hidden;
@@ -1725,7 +1729,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffcc00;
-  /* Yellow theme from your image */
+
   opacity: 0;
   transition: opacity 0.3s;
   font-weight: bold;
@@ -1735,7 +1739,7 @@ img {
   opacity: 1;
 }
 
-/* Modal Styling */
+
 .modal {
   display: none;
   position: fixed;
@@ -1789,7 +1793,7 @@ img {
 
 }
 
-/* Reels Section */
+
 
 .reels-section {
   min-height: 110vh;
@@ -1844,7 +1848,7 @@ img {
   height: 90vh;
 }
 
-/* Placeholder styling (remove when adding real content) */
+
 
 
 .reel-label {
@@ -1863,7 +1867,7 @@ img {
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover Effects */
+
 .reel:hover {
   transform: scale(1.03) translateY(-4px);
   box-shadow:
@@ -1887,7 +1891,7 @@ img {
   transform: scale(1.05);
 }
 
-/* Active State (when clicked) */
+
 .reel:active {
   transform: scale(1.05);
   box-shadow:
@@ -1906,7 +1910,7 @@ img {
   filter: brightness(1.2) saturate(1.1);
 }
 
-/* Tablet Layout (2 columns + centered 3rd) */
+
 @media (max-width: 1024px) and (min-width: 769px) {
   .reels-container {
     grid-template-columns: repeat(2, 1fr);
@@ -1924,7 +1928,7 @@ img {
   }
 }
 
-/* Mobile Layout (stacked vertically) */
+
 @media (max-width: 768px) {
   .reels-section {
     padding: 1.5rem 1rem;
@@ -1949,7 +1953,7 @@ img {
   }
 }
 
-/* Reduce motion for accessibility */
+
 @media (prefers-reduced-motion: reduce) {
 
   .reel,
@@ -1965,7 +1969,7 @@ img {
   }
 }
 
-/* Motion Graphics Section */
+
 
 
 
@@ -2041,7 +2045,7 @@ img {
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover Effects */
+
 .motion-graphic:hover {
   transform: scale(1.03) translateY(-4px);
   box-shadow:
@@ -2065,7 +2069,7 @@ img {
   transform: scale(1.05);
 }
 
-/* Active State (when clicked) */
+
 .motion-graphic:active {
   transform: scale(1.05);
   box-shadow:
@@ -2084,7 +2088,7 @@ img {
   filter: brightness(1.2) saturate(1.1);
 }
 
-/* Tablet Layout (2 columns + centered 3rd) */
+
 @media (max-width: 1024px) and (min-width: 769px) {
   .motion-graphics-container {
     grid-template-columns: repeat(2, 1fr);
@@ -2102,7 +2106,7 @@ img {
   }
 }
 
-/* Mobile Layout (stacked vertically) */
+
 @media (max-width: 768px) {
   .motion-graphics {
     padding: 1.5rem 1rem;
@@ -2127,7 +2131,7 @@ img {
   }
 }
 
-/* Reduce motion for accessibility */
+
 @media (prefers-reduced-motion: reduce) {
 
   .motion-graphic,
@@ -2141,7 +2145,7 @@ img {
   }
 }
 
-/* Ai video Section */
+
 
 .ai-section {
   text-align: center;
@@ -2163,7 +2167,7 @@ img {
   margin: 40px auto;
   overflow: hidden;
   border-radius: 16px;
-  /*padding-left: 250px;*/
+
   display: flex;
   justify-content: center;
   height: auto;
@@ -2180,7 +2184,7 @@ img {
   box-shadow: 0 0 20px rgba(255, 72, 0, 0.4);
 }
 
-/* Reels Section */
+
 .vidx-reels-wrapper {
   width: 90%;
   margin: 30px auto;
@@ -2198,19 +2202,19 @@ img {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect */
+
 .vidx-reel:hover {
   transform: scale(1.03);
   box-shadow: 0 0 20px rgba(255, 72, 0, 0.6);
 }
 
-/* Active (Click) Effect */
+
 .vidx-reel:active {
   transform: scale(0.99);
   box-shadow: 0 0 25px rgba(255, 51, 0, 0.8);
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
   .vidx-reels-wrapper {
     grid-template-columns: repeat(2, 1fr);
@@ -2223,7 +2227,7 @@ img {
   }
 }
 
-/*BANNER SECTION*/
+
 
 .banner-container {
   width: 100%;
@@ -2471,7 +2475,7 @@ img {
   margin: 50px auto 0 auto;
 }
 
-/*Gym videos */
+
 
 .gym-edits-heading {
   display: flex;
@@ -2485,18 +2489,18 @@ img {
   font-family: "Teko", sans-serif;
   padding: 40px;
   font-size: 6rem;
-  /* Prevent wrapping if possible, or allow it but keep lines aligned */
+
 }
 
-/* Make lines flexible for Gym Edits to fit 1440px and other screens */
+
 .gym-edits-heading .left-line,
 .gym-edits-heading .right-line {
   width: auto;
   flex: 1;
   max-width: 650px;
-  /* Optional: keep original size as max */
+
   min-width: 50px;
-  /* Ensure they don't disappear */
+
 }
 
 .gym-edit {
@@ -2583,9 +2587,7 @@ footer p {
   padding: 20px;
 }
 
-/* =========================================
-   NEW CONTACT SECTION STYLES
-   ========================================= */
+
 
 .contact-section {
   width: 90%;
@@ -2595,7 +2597,7 @@ footer p {
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
-  /* Glass Effect Background */
+
   background: rgba(31, 31, 31, 0.4);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -2604,7 +2606,7 @@ footer p {
   color: white;
 }
 
-/* Left Side - Form */
+
 .contact-left-modern {
   flex: 1;
   display: flex;
@@ -2669,7 +2671,7 @@ footer p {
   transform: translateY(-2px);
 }
 
-/* Right Side - Get in Touch */
+
 .contact-right-modern {
   flex: 0.8;
   display: flex;
@@ -2708,7 +2710,7 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background: rgba(249, 182, 30, 0.2); Can be removed if SVGs are colored */
+
   border-radius: 50%;
 }
 
@@ -2716,10 +2718,10 @@ footer p {
   width: 24px;
   height: 24px;
   fill: #f9b61e;
-  /* Gold Icons */
+
 }
 
-/* Hire Me Button */
+
 .hire-me-btn {
   margin-top: 20px;
   background: #f9b61e;
@@ -2742,32 +2744,30 @@ footer p {
   box-shadow: 0 0 20px rgba(249, 182, 30, 0.4);
 }
 
-/* =========================================
-   RESPONSIVE QUERIES (UPDATED)
-   ========================================= */
 
-/* Tablet & Mobile Devices */
+
+
 @media screen and (max-width: 1024px) {
 
-  /* Global Adjustments */
+
   html,
   body {
     overflow-x: hidden;
     width: 100%;
   }
 
-  /* Hero Section */
+
   .hero-text {
     width: 90%;
     font-size: 3rem;
-    /* Scale down from 5rem */
+
   }
 
   .hero-text p {
     font-size: 0.9rem;
   }
 
-  /* About Me Section - Stack Grid */
+
   .about-me {
     display: flex;
     flex-direction: column;
@@ -2780,7 +2780,7 @@ footer p {
     text-align: center;
   }
 
-  /* Center the social/contact icons in About Me */
+
   .svg2 {
     justify-content: center;
   }
@@ -2795,12 +2795,12 @@ footer p {
 
   .intro h2 {
     font-size: 3.5rem;
-    /* Bigger name text */
+
     margin-top: 15px;
   }
 
-  /* Make Education and Experience side-by-side on Tablet */
-  /* Make Education, Experience, Skills, Expertise, Hobbies, Language side-by-side on Tablet */
+
+
   .col2,
   .col3,
   .col4 {
@@ -2820,17 +2820,17 @@ footer p {
   .Hobbies,
   .language {
     width: 48%;
-    /* Side by side */
+
     margin-bottom: 0;
     text-align: center;
-    /* Keep content readable */
+
   }
 
   .about-me-contact h2 {
     font-size: 2rem;
   }
 
-  /* Remove vertical lines in stacked mode */
+
   .dot1,
   .dot2,
   .dot3,
@@ -2847,7 +2847,7 @@ footer p {
     display: none;
   }
 
-  /* Portfolio/Gallery Container */
+
   .portfolio-container {
     flex-direction: column;
     height: auto;
@@ -2863,10 +2863,10 @@ footer p {
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    /* 2 cols on tablet */
+
   }
 
-  /* Video Collage - 2 columns */
+
   .video-collage {
     grid-template-columns: repeat(2, 1fr);
     height: auto;
@@ -2882,23 +2882,23 @@ footer p {
     grid-row: span 2;
   }
 
-  /* Hide duplicate "My works" text on tablet/mobile */
+
   .design-text-headline h1:last-child {
     display: none;
   }
 
-  /* Banners */
+
   .banner-container h2 {
     font-size: 3rem;
   }
 
   .clothing-banners {
     grid-template-columns: 1fr;
-    /* Stack banners */
+
     margin-left: 0;
     padding: 10px;
     justify-items: center;
-    /* Center the grid items */
+
   }
 
   .banner-card1,
@@ -2908,7 +2908,7 @@ footer p {
   .banner-card5,
   .banner-card6 {
     margin: 0 auto;
-    /* Ensure they are centered */
+
     text-align: center;
   }
 
@@ -2935,13 +2935,13 @@ footer p {
   }
 }
 
-/* Keep existing mobile query below, ensuring it covers font sizes if needed */
 
 
-/* Mobile Devices (Small Screens) */
+
+
 @media screen and (max-width: 768px) {
 
-  /* Hero */
+
   .hero-text {
     font-size: 2.5rem;
   }
@@ -2950,17 +2950,17 @@ footer p {
     font-size: 1rem;
   }
 
-  /* Portfolio Grid */
+
   .grid {
     grid-template-columns: 1fr;
-    /* 1 col on mobile */
+
   }
 
   .side-columns .grid {
     grid-template-columns: 1fr;
   }
 
-  /* Video Collage */
+
   .video-collage {
     grid-template-columns: 1fr;
     padding: 10px;
@@ -2976,7 +2976,7 @@ footer p {
     grid-row: span 1;
   }
 
-  /* Reels */
+
   .reels-container,
   .motion-graphics-container {
     grid-template-columns: 1fr;
@@ -2989,29 +2989,29 @@ footer p {
   .gym-edits-heading h1,
   .ai-section h1 {
     font-size: 2rem;
-    /* Reduced from 3rem to fit long text */
+
     height: auto;
     margin-top: 20px;
     margin-bottom: 20px;
     word-wrap: break-word;
-    /* Ensure it wraps if still too long */
+
   }
 
   .reel,
   .motion-graphic {
     min-height: 300px;
-    /* Reset fixed heights */
+
     height: auto;
     aspect-ratio: 9/16;
   }
 
-  /* Text Headlines */
+
   .video-text-headline h1,
   .design-text-headline h1,
   .text-overlay h1 {
     font-size: 5rem !important;
-    /* Increased from 3rem */
-    /* Force override */
+
+
     padding: 10px;
   }
 
@@ -3022,32 +3022,32 @@ footer p {
     text-align: center;
   }
 
-  /* AI Section */
+
   .vidx-reels-wrapper {
     grid-template-columns: 1fr;
   }
 
-  /* Gym Edit */
+
   .gym-edits-heading h1 {
     font-size: 4rem;
-    /* Increased size as requested */
+
     white-space: nowrap;
-    /* Tries to keep it on one line if possible */
+
   }
 
   .gym-edits-heading {
     flex-direction: column;
-    /* Stack lines and text if needed space */
+
     gap: 10px;
   }
 
   .left-line,
   .right-line {
     width: 50px;
-    /* Smaller decorative lines on mobile */
+
   }
 
-  /* Increase video width specifically for Gym section if using vidx-hero */
+
   .vidx-hero {
     width: 100%;
     padding-left: 0;
@@ -3056,10 +3056,10 @@ footer p {
 
   .vidx-hero-video {
     width: 95%;
-    /* Make video almost full width */
+
   }
 
-  /* General Padding */
+
   .portfolio-container,
   .banner-container,
   .reels-section,
@@ -3067,7 +3067,7 @@ footer p {
     padding: 10px;
   }
 
-  /* Reset Education/Experience stacking for Mobile */
+
   .col2,
   .col3,
   .col4 {
@@ -3083,7 +3083,7 @@ footer p {
   .language {
     width: 100%;
     margin-bottom: 30px;
-    /* Center align for mobile vertical stack */
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3101,7 +3101,7 @@ footer p {
     align-items: center;
   }
 
-  /* Remove left padding that pushes content off-center */
+
   .education,
   .exp,
   .sk,
@@ -3113,13 +3113,9 @@ footer p {
 
   .intro h2 {
     font-size: 2.8rem;
-    /* Big but fits mobile */
   }
 }
 
-/* =========================================
-   LANDSCAPE MOBILE ADJUSTMENTS
-   ========================================= */
 @media screen and (max-width: 950px) and (orientation: landscape) {
 
   .col2,
@@ -3138,6 +3134,39 @@ footer p {
     width: 48% !important;
     margin-bottom: 0;
     text-align: center;
-    /* Center alignment as requested */
   }
+}
+
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.loader-content {
+  text-align: center;
+}
+
+#loader-percentage {
+  font-family: "Teko", sans-serif;
+  font-size: 8rem;
+  color: #f9b61e;
+  margin: 0;
+}
+
+.loader-hidden {
+  transform: translateY(-100%);
+}
+
+body.loading {
+  overflow: hidden;
 }
