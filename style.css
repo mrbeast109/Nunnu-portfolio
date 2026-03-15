@@ -706,7 +706,7 @@ img {
 
   body,
   html {
-    overflow: visible;
+    overflow-x: hidden;
     height: auto;
   }
 
@@ -715,7 +715,7 @@ img {
     flex: none;
     width: 100%;
     height: auto;
-    overflow: visible;
+    overflow-x: hidden;
   }
 
 
@@ -1376,8 +1376,6 @@ body {
 .col-4 {
   position: relative;
 }
-
-
 
 
 .language {
@@ -3165,6 +3163,18 @@ footer p {
 
 .loader-hidden {
   transform: translateY(-100%);
+}
+
+@media (max-width: 950px) {
+  #loader-percentage {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #loader-percentage {
+    font-size: 4.5rem;
+  }
 }
 
 body.loading {
